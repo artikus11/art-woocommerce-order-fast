@@ -1,0 +1,23 @@
+{
+  "name": "art/woocommerce-order-fast",
+  "description": "Plugin for WooCommerce. Quick order of products which are currently in the cart.",
+  "license": "GPL-2.0",
+  "keywords": [
+    "art",
+    "woocommerce",
+    "order"
+  ],
+  "homepage": "https://github.com/artikus11/art-woocommerce-order-fast",
+  "authors": [
+    {
+      "name": "Artem Abramovich",
+      "homepage": "https://wpruse.ru"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "classmap": [
+      "classes"
+    ]
+  }
+}
