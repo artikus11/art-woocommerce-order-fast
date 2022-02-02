@@ -40,16 +40,16 @@ require AWOF_PLUGIN_DIR . '/vendor/autoload.php';
 
 register_uninstall_hook( __FILE__, array( 'AWOOC', 'uninstall' ) );
 
-if ( ! function_exists( 'awfo' ) ) {
+if ( ! function_exists( 'awof' ) ) {
 	/**
 	 *
 	 * @return object AWOF class object.
 	 * @since 1.0.0
 	 */
-	function awfo(): object {
+	function awof(): object {
 
 		return AWOF\Main::instance();
 	}
 }
 
-awfo();
+awof();

@@ -8,9 +8,11 @@ class ComposerStaticInit1d610401aa093ba010aaa1616ecfd546
 {
     public static $classMap = array (
         'AWOF\\Enqueue' => __DIR__ . '/../..' . '/classes/class-enqueue.php',
+        'AWOF\\Front' => __DIR__ . '/../..' . '/classes/class-front.php',
         'AWOF\\Main' => __DIR__ . '/../..' . '/classes/class-main.php',
         'AWOF\\Requirements' => __DIR__ . '/../..' . '/classes/class-requirements.php',
         'AWOF\\Settings' => __DIR__ . '/../..' . '/classes/class-settings.php',
+        'AWOF\\Templater' => __DIR__ . '/../..' . '/classes/class-templater.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

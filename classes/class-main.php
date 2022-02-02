@@ -16,8 +16,13 @@ class Main {
 	 */
 	private static ?Main $instance = null;
 
+	/**
+	 * @var \AWOF\Templater
+	 */
+	private Templater $template;
 
-	public function __construct() {
+
+	private function __construct() {
 
 		$this->init();
 		$this->hooks();
@@ -27,9 +32,11 @@ class Main {
 
 	public function init(): void {
 
-
 		( new Requirements( $this ) )->init();
 		( new Enqueue() )->init();
+		(new Front($this))->init();
+
+		$this->template = new Templater();
 
 	}
 
@@ -81,6 +88,17 @@ class Main {
 
 		return self::$instance;
 
+	}
+
+
+	/**
+	 * @param $template_name
+	 *
+	 * @return string
+	 */
+	public function get_template($template_name): string {
+
+		return $this->template->get_template($template_name);
 	}
 
 }

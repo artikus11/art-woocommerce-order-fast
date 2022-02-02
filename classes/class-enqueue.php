@@ -55,8 +55,8 @@ class Enqueue {
 			]
 		);
 
-		wp_enqueue_script( 'awooc-scripts' );
-		wp_enqueue_style( 'awooc-styles' );
+		wp_enqueue_script( 'awof-scripts' );
+		wp_enqueue_style( 'awof-styles' );
 	}
 
 
