@@ -35,7 +35,7 @@ class Enqueue {
 		wp_register_script(
 			'awof-scripts',
 			AWOF_PLUGIN_URI . 'assets/js/scripts' . $this->get_suffix() . '.js',
-			[ 'jquery' ],
+			[ 'jquery', 'jquery-blockui' ],
 			AWOF_PLUGIN_VER,
 			false
 		);
