@@ -9,7 +9,7 @@
 	] ); ?>
 
 	<button
-		type="button"
+		type="submit"
 		class="checkout-button button alt wc-forward awof-button"><?php echo esc_html(get_option( 'woocommerce_awof_button', __( 'Quick Order', 'art-woocommerce-order-fast' ) ) ) ?></button>
 	<?php wp_nonce_field( 'awof-cart-action', 'awof-cart-nonce' ); ?>
 </form>
