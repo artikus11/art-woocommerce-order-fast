@@ -25,7 +25,7 @@ class Requirements {
 				'name'    => 'WooCommerce',
 				'slug'    => 'woocommerce',
 				'class'   => 'WooCommerce',
-				'version' => '5.0',
+				'version' => '5.2',
 				'active'  => false,
 			],
 		];

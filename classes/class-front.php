@@ -12,23 +12,25 @@ class Front {
 		}
 
 		add_action( 'woocommerce_proceed_to_checkout', [ $this, 'in_cart_page' ], 30 );
-		add_action( 'woocommerce_widget_shopping_cart_buttons', [ $this, 'in_mini_cart' ], 30 );
+		add_action( 'woocommerce_widget_shopping_cart_after_buttons', [ $this, 'in_mini_cart' ], 30 );
 
 	}
 
-	public function in_cart_page() {
+
+	public function in_cart_page(): void {
+
 		$this->render();
+
 	}
 
-	public function in_mini_cart() {
+
+	public function in_mini_cart(): void {
 
 		$this->render();
-
 	}
 
 
 	public function render( $args = [] ): void {
-		//ob_start();
 
 		load_template(
 			awof()->get_template( 'form.php' ),
@@ -36,7 +38,6 @@ class Front {
 			$args
 		);
 
-		//echo ob_get_clean();
 	}
 
 }

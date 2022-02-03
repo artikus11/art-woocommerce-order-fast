@@ -1,5 +1,10 @@
+.woocommerce .awof-form {
+	padding: 1em;
+	border: 1px solid #eee;
+}
+
 .awof-phone,
-.awof-phone-input{
+.awof-phone-input {
 	width: 100%;
 	font-size: initial;
 }
@@ -16,9 +21,11 @@
 input[type=text].awof-phone-error {
 	background-color: #ffc0c0;
 }
-.woocommerce button.awof-button{
+
+.woocommerce button.awof-button {
 	width: 100%;
 }
+
 .awof-button.loading {
 	color: #eeeeee !important;
 	background-color: #eeeeee !important;

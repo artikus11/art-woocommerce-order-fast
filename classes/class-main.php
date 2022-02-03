@@ -34,7 +34,7 @@ class Main {
 
 		( new Requirements( $this ) )->init();
 		( new Enqueue() )->init();
-		(new Front($this))->init();
+		( new Front() )->init();
 
 		$this->template = new Templater();
 
@@ -96,9 +96,9 @@ class Main {
 	 *
 	 * @return string
 	 */
-	public function get_template($template_name): string {
+	public function get_template( $template_name ): string {
 
-		return $this->template->get_template($template_name);
+		return $this->template->get_template( $template_name );
 	}
 
 }

@@ -11,7 +11,7 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  * RequiresWP: 5.5
  * RequiresPHP: 7.4
- * WC requires at least: 5.0.0
+ * WC requires at least: 5.2.0
  * WC tested up to: 6.1
  *
  * Copyright Artem Abramovich
