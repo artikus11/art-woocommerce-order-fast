@@ -81,9 +81,9 @@ class Main {
 	public function load_textdomain(): void {
 
 		load_plugin_textdomain(
-			'art-woocommerce-dadata-integrations',
+			'art-woocommerce-order-fast',
 			false,
-			dirname( AWDI_PLUGIN_FILE ) . '/languages/'
+			dirname( AWOF_PLUGIN_FILE ) . '/languages/'
 		);
 
 	}
