@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Art WooCommerce Fast Order
+ * Plugin Name: Art WooCommerce Order Fast
  * Plugin URI: wpruse.ru
  * Text Domain: art-woocommerce-order-fast
  * Domain Path: /languages
