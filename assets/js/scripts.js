@@ -51,14 +51,14 @@ jQuery( function ( $ ) {
 	};
 
 	const AWOF = {
-		form:    '.awof-form',
-		button:  '.awof-button',
-		field:   '.awof-phone-input',
-		nonce:   '#awof-cart-nonce',
-		message: '<div class="awof-message"></div>',
-		error:   '<span class="awof-error">' + awof_scripts.translate.empty_field + '</span>',
+		form:           '.awof-form',
+		button:         '.awof-button',
+		field:          '.awof-phone-input',
+		nonce:          '#awof-cart-nonce',
+		message:        '<div class="awof-message"></div>',
+		error:          '<span class="awof-error">' + awof_scripts.translate.empty_field + '</span>',
 		timeoutError:   awof_scripts.setting.timeout_error,
-		timeoutSuccess:   awof_scripts.setting.timeout_success,
+		timeoutSuccess: awof_scripts.setting.timeout_success,
 
 		init: function () {
 
@@ -103,7 +103,7 @@ jQuery( function ( $ ) {
 					unblock( $form )
 
 					if ( response.status === 412 ) {
-						AWOF.messageBox( $form, 'error', response.responseJSON.message  );
+						AWOF.messageBox( $form, 'error', response.responseJSON.message );
 					}
 
 					if ( response.status === 400 ) {
