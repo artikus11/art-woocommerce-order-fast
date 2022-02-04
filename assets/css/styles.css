@@ -19,40 +19,35 @@
 	font-size: 0.875em;
 }
 
-input[type=tel].awof-phone-error {
-	border:1px solid darkred;
+input.awof-phone-error {
+	border: 1px solid darkred;
 }
-.awof-error{
+
+.awof-error {
 	font-size: 0.825em;
 	font-style: italic;
 	color: darkred;
 	text-align: left;
 }
-.awof-message{
+
+.awof-message {
 	padding: 1em 1.5em;
 	margin: 1em 0;
 	font-size: 0.825em;
 	border: 1px solid #eee;
-}
-.awof-message.success{
-	color:darkgreen ;
-	border: 1px solid darkgreen;
-}
-.awof-message.error{
-	color:darkred ;
-	border: 1px solid darkred;
-}
-.awof-message{
-	padding: 1em 1.5em;
-	font-size: 0.825em;
-	border: 1px solid #eee;
-}
-.woocommerce button.awof-button {
-	width: 100%;
+	text-align: center;
 }
 
-.awof-button.loading {
-	color: #eeeeee !important;
-	background-color: #eeeeee !important;
-	pointer-events: none;
+.awof-message.success {
+	color: darkgreen;
+	border: 1px solid darkgreen;
+}
+
+.awof-message.error {
+	color: darkred;
+	border: 1px solid darkred;
+}
+
+.woocommerce button.awof-button {
+	width: 100%;
 }
