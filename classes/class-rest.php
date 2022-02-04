@@ -14,7 +14,7 @@ class Rest {
 	}
 
 
-	public function rest_init() {
+	public function rest_init(): void {
 
 		add_action( 'wp_loaded', [ $this, 'rest_api_includes' ], 5 );
 		add_action( 'rest_api_init', [ $this, 'route' ], 100 );
@@ -22,7 +22,7 @@ class Rest {
 	}
 
 
-	public function rest_api_includes() {
+	public function rest_api_includes(): void {
 
 		if ( empty( WC()->cart ) ) {
 			WC()->frontend_includes();

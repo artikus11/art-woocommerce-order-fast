@@ -26,6 +26,7 @@ class Main {
 
 		$this->init();
 		$this->hooks();
+		$this->load_textdomain();
 
 	}
 
@@ -71,7 +72,21 @@ class Main {
 		return array_merge( $plugin_links, $links );
 
 	}
+	/**
+	 * Textdomain.
+	 * Load the textdomain based on WP language.
+	 *
+	 * @since 1.0.0
+	 */
+	public function load_textdomain(): void {
 
+		load_plugin_textdomain(
+			'art-woocommerce-dadata-integrations',
+			false,
+			dirname( AWDI_PLUGIN_FILE ) . '/languages/'
+		);
+
+	}
 
 	/**
 	 * Instance.

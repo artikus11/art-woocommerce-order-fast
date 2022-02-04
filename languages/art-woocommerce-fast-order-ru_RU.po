@@ -1,0 +1,147 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: art-woocommerce-fast-order\n"
+"POT-Creation-Date: 2022-02-04 15:39+0400\n"
+"PO-Revision-Date: 2022-02-04 15:42+0400\n"
+"Last-Translator: Абрамович Артем | artabr.ru <artikus.sol@gmail.com>\n"
+"Language-Team: \n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;esc_html__;_e;_ex:1,2c;esc_attr__;esc_attr_e;"
+"esc_attr_x:1,2c;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../classes/class-enqueue.php:68 ../classes/class-rest.php:51
+msgid "Empty field"
+msgstr "Пустое поле"
+
+#: ../classes/class-main.php:68
+msgid "Settings"
+msgstr "Настройки"
+
+#: ../classes/class-requirements.php:86
+#, php-format
+msgid "The <strong>%s</strong> requires installed and activated plugins: "
+msgstr ""
+"Для работы плагина <strong>%s</strong> требуются установленные и "
+"активированные плагины: "
+
+#: ../classes/class-requirements.php:102
+msgid " version "
+msgstr " версия "
+
+#: ../classes/class-requirements.php:104
+msgid " or higher"
+msgstr " или выше"
+
+#: ../classes/class-requirements.php:114
+msgid " and "
+msgstr " и "
+
+#: ../classes/class-requirements.php:138
+#, php-format
+msgid "<strong>%s</strong> plugin has been deactivated."
+msgstr "<strong>%s</strong> плагин был деактивирован."
+
+#: ../classes/class-rest.php:93
+msgid "Order successfully created"
+msgstr "Заказ успешно создан"
+
+#: ../classes/class-settings.php:32
+msgid "Fast Order"
+msgstr "Быстрый заказ"
+
+#: ../classes/class-settings.php:49
+msgid "Off"
+msgstr "Выключить"
+
+#: ../classes/class-settings.php:50
+msgid "On"
+msgstr "Включить"
+
+#: ../classes/class-settings.php:65
+msgid "General"
+msgstr "Основные"
+
+#: ../classes/class-settings.php:99
+msgid "General settings"
+msgstr "Основные настройки"
+
+#: ../classes/class-settings.php:105
+msgid "Operating mode"
+msgstr "Режим работы"
+
+#: ../classes/class-settings.php:106
+msgid "Select the mode of operation and display the Buy button"
+msgstr "Выберите режим работы"
+
+#: ../classes/class-settings.php:115
+msgid "Button Label"
+msgstr "Надпись на кнопке"
+
+#: ../classes/class-settings.php:116
+msgid "Specify the desired label on the button"
+msgstr "Укажите нужную надпись на кнопке"
+
+#: ../classes/class-settings.php:119 ../templates/form.php:16
+msgid "Quick Order"
+msgstr "Быстрый заказ"
+
+#: ../classes/class-settings.php:148
+msgid "Add fast order button near checkout button"
+msgstr "Добавить кнопку быстрого заказа рядом с кнопкой оформления заказа"
+
+#: ../classes/class-settings.php:149
+msgid "Replace checkout button with fast order button"
+msgstr "Заменить кнопку оформления заказа кнопкой быстрого заказа"
+
+#~ msgid "Do not show Buy button: catalog mode"
+#~ msgstr "Не показывать кнопку Купить: режим каталога"
+
+#~ msgid "Show Buy button: normal mode"
+#~ msgstr "Показывать кнопку Купить: штатный режим"
+
+#~ msgid ""
+#~ "The Order button appears only when inventory management: pre-order mode"
+#~ msgstr ""
+#~ "Кнопка Заказать появиться только при управлении запасами: режим предзаказа"
+
+#~ msgid "Special mode: no prices and stocks"
+#~ msgstr "Специальный режим: нет цен и запасов"
+
+#~ msgid "Price & Stocks"
+#~ msgstr "Цены и Запасы"
+
+#~ msgid ""
+#~ "The inclusion of the button \"Order in one click\" in the absence of "
+#~ "price and availability of goods. Works with simple and variable and "
+#~ "goods. The button \"Add to cart\" will be hidden and only the button "
+#~ "\"Order in one click\" will be visible."
+#~ msgstr ""
+#~ "Включение кнопки \"Заказать в один клик\" при отсутствии у товаров цены и "
+#~ "наличия. Работает с простыми и вариативным и товарами. Кнопка \"Добавить "
+#~ "в корзину\" будет скрыта и видна только кнопка  \"Заказать в один клик\""
+
+#~ msgid "No price"
+#~ msgstr "Отсутствие цены"
+
+#~ msgid ""
+#~ "For product variations. When enabled, the filter of hiding the \"Add to "
+#~ "cart\" button will be disabled, attributes will always be displayed, even "
+#~ "if there is no price. It is recommended to use if there are variations "
+#~ "without prices. In this case, the \"Add to cart\" button will be hidden "
+#~ "and only the \"Order in one click\" button will be visible."
+#~ msgstr ""
+#~ "Для вариативных товаров. При включении будет отключен фильтр скрытия "
+#~ "кнопки \"Добавить в корзину\", атрибуты будут отображаться всегда, даже "
+#~ "если нет цены. Рекомендуется использовать, если есть вариации без цен. В "
+#~ "таком случае кнопка \"Добавить в корзину\" будет скрыта и видна только "
+#~ "кнопка  \"Заказать в один клик\""
