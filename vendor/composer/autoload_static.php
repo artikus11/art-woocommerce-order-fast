@@ -11,6 +11,7 @@ class ComposerStaticInit1d610401aa093ba010aaa1616ecfd546
         'AWOF\\Front' => __DIR__ . '/../..' . '/classes/class-front.php',
         'AWOF\\Main' => __DIR__ . '/../..' . '/classes/class-main.php',
         'AWOF\\Requirements' => __DIR__ . '/../..' . '/classes/class-requirements.php',
+        'AWOF\\Rest' => __DIR__ . '/../..' . '/classes/class-rest.php',
         'AWOF\\Settings' => __DIR__ . '/../..' . '/classes/class-settings.php',
         'AWOF\\Templater' => __DIR__ . '/../..' . '/classes/class-templater.php',
     );

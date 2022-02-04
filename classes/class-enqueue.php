@@ -33,9 +33,16 @@ class Enqueue {
 	public function enqueue_script_style(): void {
 
 		wp_register_script(
+			'awof-inputmask',
+			AWOF_PLUGIN_URI . 'assets/js/jquery.inputmask.min.js',
+			[ 'jquery'],
+			AWOF_PLUGIN_VER,
+			false
+		);
+		wp_register_script(
 			'awof-scripts',
 			AWOF_PLUGIN_URI . 'assets/js/scripts' . $this->get_suffix() . '.js',
-			[ 'jquery', 'jquery-blockui' ],
+			[ 'jquery', 'woocommerce', 'jquery-blockui', 'awof-inputmask' ],
 			AWOF_PLUGIN_VER,
 			false
 		);
@@ -49,13 +56,22 @@ class Enqueue {
 
 		wp_localize_script(
 			'awof-scripts',
-			'awof_scripts_ajax',
+			'awof_scripts',
 			[
-				'url' => admin_url( 'admin-ajax.php' ),
+				'url'       => admin_url( 'admin-ajax.php' ),
+				'setting'   => [
+					'timeout_success' => 2000,
+					'timeout_error' => 5000,
+					'mask' => '+7 (999) 999-99-99',
+				],
+				'translate' => [
+					'empty_field' => __( 'Empty field', 'art-woocommerce-order-fast' ),
+				],
 			]
 		);
 
 		wp_enqueue_script( 'awof-scripts' );
+		wp_enqueue_script( 'awof-inputmask' );
 		wp_enqueue_style( 'awof-styles' );
 	}
 

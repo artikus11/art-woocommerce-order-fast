@@ -1,0 +1,115 @@
+<?php
+
+namespace AWOF;
+
+use WP_Error;
+use WP_REST_Request;
+
+class Rest {
+
+	public function init(): void {
+
+		add_action( 'init', [ $this, 'rest_init' ] );
+
+	}
+
+
+	public function rest_init() {
+
+		add_action( 'wp_loaded', [ $this, 'rest_api_includes' ], 5 );
+		add_action( 'rest_api_init', [ $this, 'route' ], 100 );
+
+	}
+
+
+	public function rest_api_includes() {
+
+		if ( empty( WC()->cart ) ) {
+			WC()->frontend_includes();
+			wc_load_cart();
+		}
+	}
+
+
+	public function route(): void {
+
+		register_rest_route(
+			'awof/v1',
+			'/processing',
+			[
+				'methods'       => [ 'POST' ],
+				'show_in_index' => false,
+				'callback'      => [ $this, 'processing' ],
+				'args'          => [
+					'awof_phone' => [
+						'default'           => null,
+						'type'              => 'string',
+						'required'          => true,
+						'validate_callback' => function ( $value, $request, $param ) {
+
+							if ( empty( trim( $value ) ) ) {
+								return new WP_Error( 'rest_invalid_param', __( 'Empty field', 'art-woocommerce-order-fast' ) );
+							}
+
+							return true;
+						},
+						'sanitize_callback' => 'sanitize_text_field',
+					],
+
+				],
+
+				'permission_callback' => '__return_true',
+			]
+		);
+	}
+
+
+	/**
+	 * @param  WP_REST_Request $request
+	 *
+	 * @return array|\WP_ERROR
+	 * @throws \Exception
+	 */
+	public function processing( WP_REST_Request $request ) {
+
+		$order_id = $this->get_order_id( $request );
+
+		if ( is_wp_error( $order_id ) ) {
+			return new WP_Error( 'error'
+				, $order_id->get_error_message(),
+				[ 'status' => 412 ]
+			);
+		}
+
+		$order = wc_get_order( $order_id );
+
+		$order->calculate_totals();
+		$order->update_status( 'on-hold' );
+
+		WC()->cart->empty_cart();
+
+		return [
+			'status' => 200,
+			'message' => apply_filters( 'awof_message_success', __( 'Order successfully created', 'art-woocommerce-order-fast' )),
+			'url'     => $order->get_checkout_order_received_url(),
+		];
+
+	}
+
+
+	/**
+	 * @param  \WP_REST_Request $request
+	 *
+	 * @return int|\WP_ERROR
+	 * @throws \Exception
+	 */
+	protected function get_order_id( WP_REST_Request $request ) {
+
+		return WC()->checkout()->create_order( [
+			'billing_email'  => '',
+			'payment_method' => '',
+			'billing_phone'  => $request->get_param( 'awof_phone' ),
+		] );
+	}
+
+}

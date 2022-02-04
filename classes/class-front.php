@@ -11,22 +11,9 @@ class Front {
 			remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
 		}
 
-		add_action( 'woocommerce_proceed_to_checkout', [ $this, 'in_cart_page' ], 30 );
-		add_action( 'woocommerce_widget_shopping_cart_after_buttons', [ $this, 'in_mini_cart' ], 30 );
+		add_action( 'woocommerce_proceed_to_checkout', [ $this, 'render' ], 30 );
+		add_action( 'woocommerce_widget_shopping_cart_after_buttons', [ $this, 'render' ], 30 );
 
-	}
-
-
-	public function in_cart_page(): void {
-
-		$this->render();
-
-	}
-
-
-	public function in_mini_cart(): void {
-
-		$this->render();
 	}
 
 

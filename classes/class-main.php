@@ -35,6 +35,7 @@ class Main {
 		( new Requirements( $this ) )->init();
 		( new Enqueue() )->init();
 		( new Front() )->init();
+		( new Rest() )->init();
 
 		$this->template = new Templater();
 
