@@ -38,7 +38,7 @@ define( 'AWOF_PLUGIN_NAME', $plugin_data['name'] );
 
 require AWOF_PLUGIN_DIR . '/vendor/autoload.php';
 
-register_uninstall_hook( __FILE__, array( 'AWOOC', 'uninstall' ) );
+register_uninstall_hook( __FILE__, array( AWOF\Uninstall::class, 'uninstall' ) );
 
 if ( ! function_exists( 'awof' ) ) {
 	/**
