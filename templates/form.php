@@ -4,7 +4,7 @@
 		'type'        => 'tel',
 		'label'       => '',
 		'required'    => true,
-		'placeholder' => '+7 (___) ___-__-__',
+		'placeholder' => get_option( 'woocommerce_awof_phone_placeholder', '+7 (___) ___-__-__' ),
 		'class'       => [ 'awof-phone', 'awof-phone-cart' ],
 		'input_class' => [ 'awof-phone-input' ],
 	] ); ?>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: art-woocommerce-fast-order\n"
-"POT-Creation-Date: 2022-02-04 15:39+0400\n"
-"PO-Revision-Date: 2022-02-04 15:42+0400\n"
+"POT-Creation-Date: 2022-02-07 14:04+0400\n"
+"PO-Revision-Date: 2022-02-07 14:04+0400\n"
 "Last-Translator: Абрамович Артем | artabr.ru <artikus.sol@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
@@ -83,23 +83,60 @@ msgstr "Режим работы"
 msgid "Select the mode of operation and display the Buy button"
 msgstr "Выберите режим работы"
 
-#: ../classes/class-settings.php:115
+#: ../classes/class-settings.php:121
+msgid "Form settings"
+msgstr "Настройки формы"
+
+#: ../classes/class-settings.php:126
 msgid "Button Label"
 msgstr "Надпись на кнопке"
 
-#: ../classes/class-settings.php:116
+#: ../classes/class-settings.php:127
 msgid "Specify the desired label on the button"
 msgstr "Укажите нужную надпись на кнопке"
 
-#: ../classes/class-settings.php:119 ../templates/form.php:16
+#: ../classes/class-settings.php:130 ../templates/form.php:16
 msgid "Quick Order"
 msgstr "Быстрый заказ"
 
+#: ../classes/class-settings.php:137
+msgid "Delay time success, ms"
+msgstr "Время задержки (успех), мс"
+
+#: ../classes/class-settings.php:138
+msgid "Success message display delay time"
+msgstr "Время задержки для сообщения об успешной отправке"
+
 #: ../classes/class-settings.php:148
+msgid "Delay time error, ms"
+msgstr "Время задержки (ошибка), мс"
+
+#: ../classes/class-settings.php:149
+msgid "Error message display delay time"
+msgstr "Время задержки для сообщения об ошибке"
+
+#: ../classes/class-settings.php:159
+msgid "Phone mask"
+msgstr "Маска"
+
+#: ../classes/class-settings.php:160
+msgid ""
+"Specify the required phone mask. The script responds to the number \"9\""
+msgstr "Укажите требуюмую маску телефона. Скрипт реагирует на цифру \"9\""
+
+#: ../classes/class-settings.php:170
+msgid "Phone placeholder"
+msgstr "Плейсходер"
+
+#: ../classes/class-settings.php:171
+msgid "Specify a placeholder for the phone field"
+msgstr "Укажите плейсхолдер для поля телефона"
+
+#: ../classes/class-settings.php:204
 msgid "Add fast order button near checkout button"
 msgstr "Добавить кнопку быстрого заказа рядом с кнопкой оформления заказа"
 
-#: ../classes/class-settings.php:149
+#: ../classes/class-settings.php:205
 msgid "Replace checkout button with fast order button"
 msgstr "Заменить кнопку оформления заказа кнопкой быстрого заказа"
 

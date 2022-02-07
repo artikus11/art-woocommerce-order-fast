@@ -59,11 +59,11 @@ class Enqueue {
 			'awof_scripts',
 			[
 				'url'       => admin_url( 'admin-ajax.php' ),
-				'setting'   => [
-					'timeout_success' => 2000,
-					'timeout_error' => 5000,
-					'mask' => '+7 (999) 999-99-99',
-				],
+				'setting'   => apply_filters( 'awof_localize_settings', [
+					'timeout_success' => get_option( 'woocommerce_awof_delay_success', 2000 ),
+					'timeout_error'   => get_option( 'woocommerce_awof_delay_error', 5000 ),
+					'mask'            => get_option( 'woocommerce_awof_phone_mask', '+7 (999) 999-99-99' ),
+				] ),
 				'translate' => [
 					'empty_field' => __( 'Empty field', 'art-woocommerce-order-fast' ),
 				],

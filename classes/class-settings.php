@@ -102,15 +102,26 @@ class Settings extends WC_Settings_Page {
 				],
 
 				[
-					'title'   => __( 'Operating mode', 'art-woocommerce-order-fast' ),
-					'desc'    => __( 'Select the mode of operation and display the Buy button', 'art-woocommerce-order-fast' ),
-					'id'      => 'woocommerce_awof_mode',
-					'default' => 'add',
-					'type'    => 'radio',
+					'title'    => __( 'Operating mode', 'art-woocommerce-order-fast' ),
+					'desc'     => __( 'Select the mode of operation and display the Buy button', 'art-woocommerce-order-fast' ),
+					'id'       => 'woocommerce_awof_mode',
+					'default'  => 'add',
+					'type'     => 'radio',
 					'desc_tip' => true,
-					'options' => self::select_mode(),
+					'options'  => self::select_mode(),
+					'autoload' => false,
 				],
 
+				[
+					'type' => 'sectionend',
+					'id'   => 'woocommerce_awof_settings',
+				],
+
+				[
+					'name' => __( 'Form settings', 'art-woocommerce-order-fast' ),
+					'type' => 'title',
+					'id'   => 'woocommerce_awof_settings',
+				],
 				[
 					'title'    => __( 'Button Label', 'art-woocommerce-order-fast' ),
 					'desc'     => __( 'Specify the desired label on the button', 'art-woocommerce-order-fast' ),
@@ -119,6 +130,51 @@ class Settings extends WC_Settings_Page {
 					'default'  => esc_html__( 'Quick Order', 'art-woocommerce-order-fast' ),
 					'type'     => 'text',
 					'desc_tip' => true,
+					'autoload' => false,
+				],
+
+				[
+					'title'    => __( 'Delay time success, ms', 'art-woocommerce-order-fast' ),
+					'desc'     => __( 'Success message display delay time', 'art-woocommerce-order-fast' ),
+					'id'       => 'woocommerce_awof_delay_success',
+					'css'      => 'min-width:150px;',
+					'default'  => 2000,
+					'type'     => 'number',
+					'desc_tip' => true,
+					'autoload' => false,
+				],
+
+				[
+					'title'    => __( 'Delay time error, ms', 'art-woocommerce-order-fast' ),
+					'desc'     => __( 'Error message display delay time', 'art-woocommerce-order-fast' ),
+					'id'       => 'woocommerce_awof_delay_error',
+					'css'      => 'min-width:150px;',
+					'default'  => 5000,
+					'type'     => 'number',
+					'desc_tip' => true,
+					'autoload' => false,
+				],
+
+				[
+					'title'    => __( 'Phone mask', 'art-woocommerce-order-fast' ),
+					'desc'     => __( 'Specify the required phone mask. The script responds to the number "9"', 'art-woocommerce-order-fast' ),
+					'id'       => 'woocommerce_awof_phone_mask',
+					'css'      => 'min-width:350px;',
+					'default'  => '+7 (999) 999-99-99',
+					'type'     => 'text',
+					'desc_tip' => true,
+					'autoload' => false,
+				],
+
+				[
+					'title'    => __( 'Phone placeholder', 'art-woocommerce-order-fast' ),
+					'desc'     => __( 'Specify a placeholder for the phone field', 'art-woocommerce-order-fast' ),
+					'id'       => 'woocommerce_awof_phone_placeholder',
+					'css'      => 'min-width:350px;',
+					'default'  => '+7 (___) ___-__-__',
+					'type'     => 'text',
+					'desc_tip' => true,
+					'autoload' => false,
 				],
 
 				[
