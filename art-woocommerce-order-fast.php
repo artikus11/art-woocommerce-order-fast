@@ -5,14 +5,16 @@
  * Text Domain: art-woocommerce-order-fast
  * Domain Path: /languages
  * Description: Plugin for WooCommerce. Quick order of products which are currently in the cart
- * Version: 1.0.0
+ * Version: 1.1.0
  * Author: Artem Abramovich
  * Author URI: https://wpruse.ru/
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
- * RequiresWP: 5.5
- * RequiresPHP: 7.4
+ *
  * WC requires at least: 5.2.0
  * WC tested up to: 6.1
+ *
+ * RequiresWP: 5.5
+ * RequiresPHP: 7.4
  *
  * Copyright Artem Abramovich
  */

@@ -4,7 +4,7 @@ Donate link: https://wpruse.ru/r/donat/
 Tags: woocommerce, fast order, quick order
 Requires at least: 5.5
 Tested up to: 5.9
-Stable tag: 1.30.0
+Stable tag: 1.1.0
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html

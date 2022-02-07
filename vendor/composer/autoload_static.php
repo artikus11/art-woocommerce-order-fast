@@ -14,6 +14,7 @@ class ComposerStaticInit1d610401aa093ba010aaa1616ecfd546
         'AWOF\\Rest' => __DIR__ . '/../..' . '/classes/class-rest.php',
         'AWOF\\Settings' => __DIR__ . '/../..' . '/classes/class-settings.php',
         'AWOF\\Templater' => __DIR__ . '/../..' . '/classes/class-templater.php',
+        'AWOF\\Uninstall' => __DIR__ . '/../..' . '/classes/class-uninstall.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

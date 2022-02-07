@@ -13,4 +13,5 @@ return array(
     'AWOF\\Rest' => $baseDir . '/classes/class-rest.php',
     'AWOF\\Settings' => $baseDir . '/classes/class-settings.php',
     'AWOF\\Templater' => $baseDir . '/classes/class-templater.php',
+    'AWOF\\Uninstall' => $baseDir . '/classes/class-uninstall.php',
 );
