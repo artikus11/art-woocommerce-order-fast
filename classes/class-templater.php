@@ -27,7 +27,7 @@ class Templater {
 	 */
 	public function template_path(): string {
 
-		return apply_filters( 'awof_template_path', 'art-woocommerce-fast-order/' );
+		return apply_filters( 'awof_template_path', 'art-woocommerce-order-fast/' );
 	}
 
 
