@@ -33,23 +33,23 @@ class Enqueue {
 	public function enqueue_script_style(): void {
 
 		wp_register_script(
-			'awof-inputmask',
-			AWOF_PLUGIN_URI . 'assets/js/jquery.inputmask.min.js',
-			[ 'jquery'],
+			'awof-input-mask',
+			AWOF_PLUGIN_URI . 'assets/js/jquery.mask' . $this->get_suffix() . '.js',
+			[ 'jquery' ],
 			AWOF_PLUGIN_VER,
-			false
+			true
 		);
 		wp_register_script(
 			'awof-scripts',
-			AWOF_PLUGIN_URI . 'assets/js/scripts' . $this->get_suffix() . '.js',
-			[ 'jquery', 'woocommerce', 'jquery-blockui', 'awof-inputmask' ],
+			AWOF_PLUGIN_URI . 'assets/js/awof-scripts' . $this->get_suffix() . '.js',
+			[ 'jquery', 'woocommerce', 'jquery-blockui', 'awof-input-mask' ],
 			AWOF_PLUGIN_VER,
-			false
+			true
 		);
 
 		wp_register_style(
 			'awof-styles',
-			AWOF_PLUGIN_URI . 'assets/css/styles' . $this->get_suffix() . '.css',
+			AWOF_PLUGIN_URI . 'assets/css/awof-styles' . $this->get_suffix() . '.css',
 			[],
 			AWOF_PLUGIN_VER
 		);
@@ -71,7 +71,7 @@ class Enqueue {
 		);
 
 		wp_enqueue_script( 'awof-scripts' );
-		wp_enqueue_script( 'awof-inputmask' );
+		wp_enqueue_script( 'awof-input-mask' );
 		wp_enqueue_style( 'awof-styles' );
 	}
 
