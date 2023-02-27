@@ -83,8 +83,13 @@ class Rest {
 
 		$order = wc_get_order( $order_id );
 
+		$order->add_order_note( __( 'Created a quick order from the cart', 'art-woocommerce-order-fast' ) );
+		$order->update_meta_data( '_awof_quick_order', true );
+
 		$order->calculate_totals();
 		$order->update_status( 'on-hold' );
+
+		do_action( 'awof_created_order', $order );
 
 		WC()->cart->empty_cart();
 
