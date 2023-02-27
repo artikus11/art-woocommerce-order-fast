@@ -1,7 +1,17 @@
-.woocommerce .awof-form {
-	margin-top: 1em;
-	padding: 1em;
-	border: 1px solid #eee;
+.woocommerce {
+	.awof-form {
+		margin-top: 1em;
+		padding: 1em;
+		border: 1px solid #eee;
+	}
+
+	.awof-phone-cart {
+		margin-bottom: 0.5em;
+	}
+
+	button.awof-button {
+		width: 100%;
+	}
 }
 
 .awof-phone,
@@ -10,9 +20,6 @@
 	font-size: initial;
 }
 
-.woocommerce .awof-phone-cart {
-	margin-bottom: 0.5em;
-}
 
 .awof-phone-minicart {
 	margin-top: .6180469716em;
@@ -36,18 +43,14 @@ input.awof-phone-error {
 	font-size: 0.825em;
 	border: 1px solid #eee;
 	text-align: center;
-}
 
-.awof-message.success {
-	color: darkgreen;
-	border: 1px solid darkgreen;
-}
+	&.success {
+		color: darkgreen;
+		border: 1px solid darkgreen;
+	}
 
-.awof-message.error {
-	color: darkred;
-	border: 1px solid darkred;
-}
-
-.woocommerce button.awof-button {
-	width: 100%;
+	&.error {
+		color: darkred;
+		border: 1px solid darkred;
+	}
 }

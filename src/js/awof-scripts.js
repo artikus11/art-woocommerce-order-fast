@@ -88,6 +88,8 @@ jQuery( function ( $ ) {
 					if ( response.status === 200 ) {
 						AWOF.messageBox( $form, 'success', response.message );
 
+						$( document.body ).trigger( 'awof_trigger_send_form', response );
+
 						setTimeout( function () {
 								window.location.href = response.url;
 							},
