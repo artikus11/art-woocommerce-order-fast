@@ -160,7 +160,7 @@ class Settings extends WC_Settings_Page {
 					'desc'     => __( 'Specify the required phone mask. The script responds to the number "9"', 'art-woocommerce-order-fast' ),
 					'id'       => 'woocommerce_awof_phone_mask',
 					'css'      => 'min-width:350px;',
-					'default'  => '+7 (999) 999-99-99',
+					'default'  => '+7 (r00) 000-00-00',
 					'type'     => 'text',
 					'desc_tip' => true,
 					'autoload' => false,
