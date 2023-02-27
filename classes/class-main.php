@@ -37,6 +37,7 @@ class Main {
 		( new Enqueue() )->init();
 		( new Front() )->init();
 		( new Rest() )->init();
+		( new Orders() )->init();
 
 		$this->template = new Templater();
 
@@ -72,6 +73,8 @@ class Main {
 		return array_merge( $plugin_links, $links );
 
 	}
+
+
 	/**
 	 * Textdomain.
 	 * Load the textdomain based on WP language.
@@ -87,6 +90,7 @@ class Main {
 		);
 
 	}
+
 
 	/**
 	 * Instance.
