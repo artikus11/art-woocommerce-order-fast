@@ -42,10 +42,18 @@ jQuery( function ( $ ) {
 	 * @param el
 	 */
 	const addMask = function ( el ) {
-		$( el ).inputmask(
+		$( el ).mask( awof_scripts.setting.mask,
 			{
-				mask:        awof_scripts.setting.mask,
-				placeholder: $( el ).attr( 'placeholder' )
+				placeholder: $( el ).attr( 'placeholder' ),
+				byPassKeys:    [ 9, 16, 17, 18, 36, 37, 38, 39, 40, 91 ],
+				translation:   {
+					'0': { pattern: /\d/ },
+					'9': { pattern: /\d/, optional: true },
+					'#': { pattern: /\d/, recursive: true },
+					'A': { pattern: /[a-zA-Z0-9]/ },
+					'S': { pattern: /[a-zA-Z]/ },
+					'r': { pattern: /[9]/ }
+				}
 			}
 		)
 	};
@@ -61,6 +69,8 @@ jQuery( function ( $ ) {
 		timeoutSuccess: awof_scripts.setting.timeout_success,
 
 		init: function () {
+
+			addMask( AWOF.field );
 
 			$( document.body )
 				.on( 'submit', this.form, this.submit )
