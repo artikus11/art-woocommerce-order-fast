@@ -1,3 +1,18 @@
+<?php
+/**
+ * Form Template
+ *
+ * This template can be overridden by copying it to yourtheme/art-woocommerce-order-fast/form.php.
+ *
+ * @see     https://wpruse.ru/my-plugins/art-woocommerce-order-fast/
+ * @package art-woocommerce-order-fast/templates
+ * @version 1.0.0
+ *
+ * @global $args
+ */
+
+?>
+
 <form action="<?php echo rest_url( 'awof/v1/processing' ); ?>" id="awof-form" class="awof-form">
 
 	<?php woocommerce_form_field( 'awof_phone', [
