@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: art-woocommerce-fast-order\n"
-"POT-Creation-Date: 2022-02-04 15:38+0400\n"
+"POT-Creation-Date: 2023-02-27 20:33+0400\n"
 "PO-Revision-Date: 2019-08-25 14:04+0400\n"
 "Last-Translator: Абрамович Артем | artabr.ru <artikus.sol@gmail.com>\n"
 "Language-Team: \n"
@@ -11,106 +11,171 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.1\n"
-"X-Poedit-Basepath: .\n"
+"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;esc_html__;_e;_ex:1,2c;esc_attr__;esc_attr_e;"
 "esc_attr_x:1,2c;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2\n"
-"X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: ..\n"
+"X-Poedit-SearchPath-0: languages\n"
+"X-Poedit-SearchPath-1: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
 
-#: ../classes/class-enqueue.php:68 ../classes/class-rest.php:51
+#: classes/class-enqueue.php:68 classes/class-rest.php:51
+#, fuzzy
 msgid "Empty field"
-msgstr ""
+msgstr "Пустое поле"
 
-#: ../classes/class-main.php:68
+#: classes/class-main.php:69
 #, fuzzy
 msgid "Settings"
 msgstr "Настройки"
 
-#: ../classes/class-requirements.php:86
-#, php-format
+#: classes/class-orders.php:26
+#, fuzzy
+msgid "Quick Order: "
+msgstr "Быстрый заказ: "
+
+#: classes/class-requirements.php:86
+#, fuzzy, php-format
 msgid "The <strong>%s</strong> requires installed and activated plugins: "
 msgstr ""
+"Для работы плагина <strong>%s</strong> требуются установленные и "
+"активированные плагины: "
 
-#: ../classes/class-requirements.php:102
+#: classes/class-requirements.php:102
 #, fuzzy
 msgid " version "
 msgstr " версия "
 
-#: ../classes/class-requirements.php:104
+#: classes/class-requirements.php:104
 #, fuzzy
 msgid " or higher"
 msgstr " или выше"
 
-#: ../classes/class-requirements.php:114
+#: classes/class-requirements.php:114
 msgid " and "
 msgstr ""
 
-#: ../classes/class-requirements.php:138
-#, php-format
+#: classes/class-requirements.php:138
+#, fuzzy, php-format
 msgid "<strong>%s</strong> plugin has been deactivated."
-msgstr ""
+msgstr "<strong>%s</strong> плагин был деактивирован."
 
-#: ../classes/class-rest.php:93
+#: classes/class-rest.php:86
+#, fuzzy
+msgid "Created a quick order from the cart"
+msgstr "Создан быстрый заказ из корзины"
+
+#: classes/class-rest.php:98
+#, fuzzy
 msgid "Order successfully created"
-msgstr ""
+msgstr "Заказ успешно создан"
 
-#: ../classes/class-settings.php:32
+#: classes/class-settings.php:32
+#, fuzzy
 msgid "Fast Order"
-msgstr ""
+msgstr "Быстрый заказ"
 
-#: ../classes/class-settings.php:49
+#: classes/class-settings.php:49
 #, fuzzy
 msgid "Off"
 msgstr "Выключить"
 
-#: ../classes/class-settings.php:50
+#: classes/class-settings.php:50
 msgid "On"
 msgstr ""
 
-#: ../classes/class-settings.php:65
+#: classes/class-settings.php:65
 #, fuzzy
 msgid "General"
 msgstr "Основные"
 
-#: ../classes/class-settings.php:99
+#: classes/class-settings.php:99
 #, fuzzy
 msgid "General settings"
 msgstr "Основные настройки"
 
-#: ../classes/class-settings.php:105
+#: classes/class-settings.php:105
 #, fuzzy
 msgid "Operating mode"
 msgstr "Режим работы"
 
-#: ../classes/class-settings.php:106
+#: classes/class-settings.php:106
 #, fuzzy
 msgid "Select the mode of operation and display the Buy button"
-msgstr "Выберите режим работы и показа кнопки Купить"
+msgstr "Выберите режим работы"
 
-#: ../classes/class-settings.php:115
+#: classes/class-settings.php:121
+#, fuzzy
+msgid "Form settings"
+msgstr "Настройки формы"
+
+#: classes/class-settings.php:126
 #, fuzzy
 msgid "Button Label"
 msgstr "Надпись на кнопке"
 
-#: ../classes/class-settings.php:116
+#: classes/class-settings.php:127
 #, fuzzy
 msgid "Specify the desired label on the button"
 msgstr "Укажите нужную надпись на кнопке"
 
-#: ../classes/class-settings.php:119 ../templates/form.php:16
+#: classes/class-settings.php:130 templates/form.php:31
+#, fuzzy
 msgid "Quick Order"
-msgstr ""
+msgstr "Быстрый заказ"
 
-#: ../classes/class-settings.php:148
+#: classes/class-settings.php:137
+#, fuzzy
+msgid "Delay time success, ms"
+msgstr "Время задержки (успех), мс"
+
+#: classes/class-settings.php:138
+#, fuzzy
+msgid "Success message display delay time"
+msgstr "Время задержки для сообщения об успешной отправке"
+
+#: classes/class-settings.php:148
+#, fuzzy
+msgid "Delay time error, ms"
+msgstr "Время задержки (ошибка), мс"
+
+#: classes/class-settings.php:149
+#, fuzzy
+msgid "Error message display delay time"
+msgstr "Время задержки для сообщения об ошибке"
+
+#: classes/class-settings.php:159
+#, fuzzy
+msgid "Phone mask"
+msgstr "Маска"
+
+#: classes/class-settings.php:160
+#, fuzzy
+msgid ""
+"Specify the required phone mask. The script responds to the number \"9\""
+msgstr "Укажите требуюмую маску телефона. Скрипт реагирует на цифру \"9\""
+
+#: classes/class-settings.php:170
+#, fuzzy
+msgid "Phone placeholder"
+msgstr "Плейсходер"
+
+#: classes/class-settings.php:171
+#, fuzzy
+msgid "Specify a placeholder for the phone field"
+msgstr "Укажите плейсхолдер для поля телефона"
+
+#: classes/class-settings.php:204
+#, fuzzy
 msgid "Add fast order button near checkout button"
-msgstr ""
+msgstr "Добавить кнопку быстрого заказа рядом с кнопкой оформления заказа"
 
-#: ../classes/class-settings.php:149
+#: classes/class-settings.php:205
+#, fuzzy
 msgid "Replace checkout button with fast order button"
-msgstr ""
+msgstr "Заменить кнопку оформления заказа кнопкой быстрого заказа"
 
 #~ msgid "Do not show Buy button: catalog mode"
 #~ msgstr "Не показывать кнопку Купить: режим каталога"
