@@ -4,6 +4,14 @@ namespace AWOF;
 
 class Front {
 
+	/**
+	 *
+	 * @return void
+	 *
+	 * @todo в теме Каденс проблемы, так как тема подменяет фрагмент миникорзины,
+	 * как вариант принудительно отключать хук из темы или подменять файлы mini-cart.php и cart-totals.php
+	 *
+	 */
 	public function init(): void {
 
 		if ( 'replace' === get_option( 'woocommerce_awof_mode' ) ) {

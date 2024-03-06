@@ -45,8 +45,8 @@ jQuery( function ( $ ) {
 		$( el ).mask( awof_scripts.setting.mask,
 			{
 				placeholder: $( el ).attr( 'placeholder' ),
-				byPassKeys:    [ 9, 16, 17, 18, 36, 37, 38, 39, 40, 91 ],
-				translation:   {
+				byPassKeys:  [ 9, 16, 17, 18, 36, 37, 38, 39, 40, 91 ],
+				translation: {
 					'0': { pattern: /\d/ },
 					'9': { pattern: /\d/, optional: true },
 					'#': { pattern: /\d/, recursive: true },

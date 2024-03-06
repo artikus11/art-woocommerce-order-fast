@@ -24,7 +24,7 @@ class Rest {
 
 	public function rest_api_includes(): void {
 
-		if ( empty( WC()->cart ) ) {
+		if ( class_exists( 'Woocommerce' ) && ! defined( 'WP_CLI' ) && empty( WC()->cart ) ) {
 			WC()->frontend_includes();
 			wc_load_cart();
 		}
@@ -97,6 +97,7 @@ class Rest {
 			'status' => 200,
 			'message' => apply_filters( 'awof_message_success', __( 'Order successfully created', 'art-woocommerce-order-fast' )),
 			'url'     => $order->get_checkout_order_received_url(),
+			'form_data' => $request->get_params(),
 		];
 
 	}
