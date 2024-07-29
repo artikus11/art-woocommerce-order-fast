@@ -16,6 +16,7 @@ class Main {
 	 */
 	private static ?Main $instance = null;
 
+
 	/**
 	 * @var \AWOF\Templater
 	 */
@@ -27,7 +28,6 @@ class Main {
 		$this->init();
 		$this->hooks();
 		$this->load_textdomain();
-
 	}
 
 
@@ -35,12 +35,11 @@ class Main {
 
 		( new Requirements( $this ) )->init();
 		( new Enqueue() )->init();
-		( new Front($this) )->init();
+		( new Front( $this ) )->init();
 		( new Rest() )->init();
 		( new Orders() )->init();
 
 		$this->template = new Templater();
-
 	}
 
 
@@ -59,7 +58,6 @@ class Main {
 				);
 			}
 		} );
-
 	}
 
 
@@ -82,7 +80,6 @@ class Main {
 		];
 
 		return array_merge( $plugin_links, $links );
-
 	}
 
 
@@ -99,7 +96,6 @@ class Main {
 			false,
 			dirname( AWOF_PLUGIN_FILE ) . '/languages/'
 		);
-
 	}
 
 
@@ -118,7 +114,6 @@ class Main {
 		endif;
 
 		return self::$instance;
-
 	}
 
 
