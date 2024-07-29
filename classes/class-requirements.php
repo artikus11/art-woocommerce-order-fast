@@ -14,6 +14,7 @@ class Requirements {
 	 */
 	private array $required_plugins;
 
+
 	private Main $main;
 
 
@@ -150,7 +151,6 @@ class Requirements {
 			esc_attr( $class ),
 			wp_kses_post( $message )
 		);
-
 	}
 
 

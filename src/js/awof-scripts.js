@@ -1,3 +1,27 @@
+/**
+ * Установка маски.
+ *
+ * @param el
+ * @param mask
+ * @param placeholder
+ */
+const addMask = function ( el, mask, placeholder ) {
+	el.mask( mask,
+		{
+			placeholder: placeholder,
+			byPassKeys:  [ 9, 16, 17, 18, 36, 37, 38, 39, 40, 91 ],
+			translation: {
+				'0': { pattern: /\d/ },
+				'9': { pattern: /\d/, optional: true },
+				'#': { pattern: /\d/, recursive: true },
+				'A': { pattern: /[a-zA-Z0-9]/ },
+				'S': { pattern: /[a-zA-Z]/ },
+				'r': { pattern: /9/ }
+			}
+		}
+	)
+};
+
 jQuery( function ( $ ) {
 
 	/**
@@ -36,27 +60,6 @@ jQuery( function ( $ ) {
 		$node.removeClass( 'processing' ).unblock();
 	};
 
-	/**
-	 * Установка маски.
-	 *
-	 * @param el
-	 */
-	const addMask = function ( el ) {
-		$( el ).mask( awof_scripts.setting.mask,
-			{
-				placeholder: $( el ).attr( 'placeholder' ),
-				byPassKeys:    [ 9, 16, 17, 18, 36, 37, 38, 39, 40, 91 ],
-				translation:   {
-					'0': { pattern: /\d/ },
-					'9': { pattern: /\d/, optional: true },
-					'#': { pattern: /\d/, recursive: true },
-					'A': { pattern: /[a-zA-Z0-9]/ },
-					'S': { pattern: /[a-zA-Z]/ },
-					'r': { pattern: /[9]/ }
-				}
-			}
-		)
-	};
 
 	const AWOF = {
 		form:           '.awof-form',
@@ -70,12 +73,12 @@ jQuery( function ( $ ) {
 
 		init: function () {
 
-			addMask( AWOF.field );
+			addMask( $( AWOF.field ), awof_scripts.setting.mask, $( AWOF.field ).attr( 'placeholder' ) );
 
 			$( document.body )
 				.on( 'submit', this.form, this.submit )
 				.on( 'wc_fragments_loaded', function ( e ) {
-					addMask( AWOF.field )
+					addMask( $( AWOF.field ), awof_scripts.setting.mask, $( AWOF.field ).attr( 'placeholder' ) );
 				} )
 
 		},
@@ -133,17 +136,33 @@ jQuery( function ( $ ) {
 			const phone    = $this.find( AWOF.field )
 			const formData = {}
 
-			const FD = new FormData( e.target );
+			let fields = e.target.querySelectorAll( 'input' )
+			const FD   = new FormData( e.target );
 
 			FD.forEach( function ( value, key ) {
 				formData[ key ] = value;
 			} );
 
-			if ( ! AWOF.validation( phone.val() ) ) {
-				AWOF.setErrorStyle( phone );
+			fields.forEach( function ( field ) {
 
-				return false
-			}
+
+				if ( $( field ).val() ) {
+					return true;
+				}
+
+				if ( ! $( field ).val() ) {
+					AWOF.setErrorStyle( $( field ) );
+
+					return false
+				}
+
+				if ( ! AWOF.validation( $( field ).val() ) ) {
+					AWOF.setErrorStyle( $( field ) );
+
+					return false
+				}
+			} );
+
 
 			block( $( e.target ) )
 
