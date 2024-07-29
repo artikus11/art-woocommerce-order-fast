@@ -23,6 +23,7 @@ class Uninstall {
 		}
 
 		self::remove_options();
+		self::remove_post_meta();
 	}
 
 
@@ -39,6 +40,16 @@ class Uninstall {
 	}
 
 
-	public static function remove_post_meta(): void {}
+	public static function remove_post_meta(): void {
+
+		global $wpdb;
+
+		$wpdb->query(
+			$wpdb->prepare(
+				"DELETE FROM $wpdb->postmeta WHERE meta_key LIKE %s",
+				sprintf( '%s%s', $wpdb->esc_like( '_awof_' ), '%' )
+			)
+		);
+	}
 
 }
