@@ -8,21 +8,20 @@
  * @package art-woocommerce-order-fast/templates
  * @version 1.0.0
  *
- * @global $args
+ * @var $args
  */
+
+$fields = $args['fields'];
 
 ?>
 
 <form action="<?php echo rest_url( 'awof/v1/processing' ); ?>" id="awof-form" class="awof-form">
 
-	<?php woocommerce_form_field( 'awof_phone', [
-		'type'        => 'tel',
-		'label'       => '',
-		'required'    => true,
-		'placeholder' => get_option( 'woocommerce_awof_phone_placeholder', '+7 (___) ___-__-__' ),
-		'class'       => [ 'awof-phone', 'awof-phone-cart' ],
-		'input_class' => [ 'awof-phone-input' ],
-	] ); ?>
+	<?php
+	foreach ( $fields as $field_key => $field_value ):
+		woocommerce_form_field( $field_key, $field_value );
+	endforeach;
+	?>
 
 	<button
 		type="submit"

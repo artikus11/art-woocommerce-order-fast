@@ -35,7 +35,7 @@ class Main {
 
 		( new Requirements( $this ) )->init();
 		( new Enqueue() )->init();
-		( new Front() )->init();
+		( new Front($this) )->init();
 		( new Rest() )->init();
 		( new Orders() )->init();
 
@@ -48,6 +48,17 @@ class Main {
 
 		add_filter( 'plugin_action_links_' . AWOF_PLUGIN_FILE, [ $this, 'add_plugin_action_links' ], 10, 1 );
 		add_filter( 'woocommerce_get_settings_pages', [ $this, 'add_settings' ], 15 );
+
+		add_action( 'before_woocommerce_init', static function () {
+
+			if ( class_exists( \Automattic\WooCommerce\Utilities\FeaturesUtil::class ) ) {
+				\Automattic\WooCommerce\Utilities\FeaturesUtil::declare_compatibility(
+					'custom_order_tables',
+					AWOF_PLUGIN_FILE,
+					true
+				);
+			}
+		} );
 
 	}
 

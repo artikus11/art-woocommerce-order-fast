@@ -1,56 +1,70 @@
 .woocommerce {
-	.awof-form {
-		margin-top: 1em;
-		padding: 1em;
-		border: 1px solid #eee;
-	}
+  .awof-form {
+    margin-top: 1em;
+    padding: 1em;
+    border: 1px solid #eee;
 
-	.awof-phone-cart {
-		margin-bottom: 0.5em;
-	}
+    .required {
+      display: none;
+    }
 
-	button.awof-button {
-		width: 100%;
-	}
+    p {
+      margin: 0 0 .5em;
+    }
+
+    button {
+      &.awof-button {
+        width: 100%;
+        margin-top: 1em;
+      }
+    }
+
+  }
+
+  .awof-phone-cart {
+
+  }
+
+
 }
 
 .awof-phone,
 .awof-phone-input {
-	width: 100%;
-	font-size: initial;
+  width: 100%;
+  font-size: initial;
 }
 
 
 .awof-phone-minicart {
-	margin-top: .6180469716em;
-	font-size: 0.875em;
+  margin-top: .6180469716em;
+  font-size: 0.875em;
 }
 
 input.awof-phone-error {
-	border: 1px solid darkred;
+  border: 1px solid darkred;
 }
 
 .awof-error {
-	font-size: 0.825em;
-	font-style: italic;
-	color: darkred;
-	text-align: left;
+  font-size: 0.825em;
+  font-style: italic;
+  color: darkred;
+  text-align: left;
 }
 
 .awof-message {
-	padding: 1em 1.5em;
-	margin: 1em 0;
-	font-size: 0.825em;
-	border: 1px solid #eee;
-	text-align: center;
+  padding: 1em 1.5em;
+  margin: 1em 0;
+  font-size: 0.825em;
+  border: 1px solid #eee;
+  text-align: center;
 
-	&.success {
-		color: darkgreen;
-		border: 1px solid darkgreen;
-	}
+  &.success {
+    color: darkgreen;
+    border: 1px solid darkgreen;
+  }
 
-	&.error {
-		color: darkred;
-		border: 1px solid darkred;
-	}
+  &.error {
+    color: darkred;
+    border: 1px solid darkred;
+  }
 }
