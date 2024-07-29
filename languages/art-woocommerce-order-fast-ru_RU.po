@@ -1,18 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: art-woocommerce-fast-order\n"
-"POT-Creation-Date: 2023-02-27 20:31+0400\n"
-"PO-Revision-Date: 2023-02-27 20:31+0400\n"
+"POT-Creation-Date: 2024-07-29 17:04+0400\n"
+"PO-Revision-Date: 2024-07-29 17:04+0400\n"
 "Last-Translator: Абрамович Артем | artabr.ru <artikus.sol@gmail.com>\n"
 "Language-Team: \n"
 "Language: ru_RU\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Poedit 3.4.1\n"
 "X-Poedit-Basepath: ..\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;esc_html__;_e;_ex:1,2c;esc_attr__;esc_attr_e;"
 "esc_attr_x:1,2c;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2\n"
@@ -20,11 +20,25 @@ msgstr ""
 "X-Poedit-SearchPath-1: .\n"
 "X-Poedit-SearchPathExcluded-0: node_modules\n"
 
-#: classes/class-enqueue.php:68 classes/class-rest.php:51
+#: classes/class-enqueue.php:68 classes/class-rest.php:126
 msgid "Empty field"
 msgstr "Пустое поле"
 
-#: classes/class-main.php:69
+#: classes/class-front.php:79 classes/class-front.php:81
+#: classes/class-settings.php:223
+msgid "Name"
+msgstr "Имя"
+
+#: classes/class-front.php:87 classes/class-front.php:89
+#: classes/class-settings.php:224
+msgid "Email"
+msgstr "Email"
+
+#: classes/class-front.php:95 classes/class-settings.php:225
+msgid "Phone"
+msgstr "Телефон"
+
+#: classes/class-main.php:78
 msgid "Settings"
 msgstr "Настройки"
 
@@ -32,35 +46,35 @@ msgstr "Настройки"
 msgid "Quick Order: "
 msgstr "Быстрый заказ: "
 
-#: classes/class-requirements.php:86
+#: classes/class-requirements.php:87
 #, php-format
 msgid "The <strong>%s</strong> requires installed and activated plugins: "
 msgstr ""
 "Для работы плагина <strong>%s</strong> требуются установленные и "
 "активированные плагины: "
 
-#: classes/class-requirements.php:102
+#: classes/class-requirements.php:103
 msgid " version "
 msgstr " версия "
 
-#: classes/class-requirements.php:104
+#: classes/class-requirements.php:105
 msgid " or higher"
 msgstr " или выше"
 
-#: classes/class-requirements.php:114
+#: classes/class-requirements.php:115
 msgid " and "
 msgstr " и "
 
-#: classes/class-requirements.php:138
+#: classes/class-requirements.php:139
 #, php-format
 msgid "<strong>%s</strong> plugin has been deactivated."
 msgstr "<strong>%s</strong> плагин был деактивирован."
 
-#: classes/class-rest.php:86
+#: classes/class-rest.php:68
 msgid "Created a quick order from the cart"
 msgstr "Создан быстрый заказ из корзины"
 
-#: classes/class-rest.php:98
+#: classes/class-rest.php:80
 msgid "Order successfully created"
 msgstr "Заказ успешно создан"
 
@@ -68,84 +82,96 @@ msgstr "Заказ успешно создан"
 msgid "Fast Order"
 msgstr "Быстрый заказ"
 
-#: classes/class-settings.php:49
+#: classes/class-settings.php:48
 msgid "Off"
 msgstr "Выключить"
 
-#: classes/class-settings.php:50
+#: classes/class-settings.php:49
 msgid "On"
 msgstr "Включить"
 
-#: classes/class-settings.php:65
+#: classes/class-settings.php:64
 msgid "General"
 msgstr "Основные"
 
-#: classes/class-settings.php:99
+#: classes/class-settings.php:101
 msgid "General settings"
 msgstr "Основные настройки"
 
-#: classes/class-settings.php:105
+#: classes/class-settings.php:107
 msgid "Operating mode"
 msgstr "Режим работы"
 
-#: classes/class-settings.php:106
+#: classes/class-settings.php:108
 msgid "Select the mode of operation and display the Buy button"
 msgstr "Выберите режим работы"
 
-#: classes/class-settings.php:121
+#: classes/class-settings.php:123
 msgid "Form settings"
 msgstr "Настройки формы"
 
-#: classes/class-settings.php:126
+#: classes/class-settings.php:128
+msgid "Form fields"
+msgstr "Поля формы"
+
+#: classes/class-settings.php:129
+msgid "Select the required fields"
+msgstr "Выбор полей"
+
+#: classes/class-settings.php:140
+msgid "Show field labels"
+msgstr "Показывать надписи"
+
+#: classes/class-settings.php:149
 msgid "Button Label"
 msgstr "Надпись на кнопке"
 
-#: classes/class-settings.php:127
+#: classes/class-settings.php:150
 msgid "Specify the desired label on the button"
 msgstr "Укажите нужную надпись на кнопке"
 
-#: classes/class-settings.php:130 templates/form.php:31
+#: classes/class-settings.php:153 templates/form.php:30
 msgid "Quick Order"
 msgstr "Быстрый заказ"
 
-#: classes/class-settings.php:137
+#: classes/class-settings.php:159
 msgid "Delay time success, ms"
 msgstr "Время задержки (успех), мс"
 
-#: classes/class-settings.php:138
+#: classes/class-settings.php:160
 msgid "Success message display delay time"
 msgstr "Время задержки для сообщения об успешной отправке"
 
-#: classes/class-settings.php:148
+#: classes/class-settings.php:170
 msgid "Delay time error, ms"
 msgstr "Время задержки (ошибка), мс"
 
-#: classes/class-settings.php:149
+#: classes/class-settings.php:171
 msgid "Error message display delay time"
 msgstr "Время задержки для сообщения об ошибке"
 
-#: classes/class-settings.php:159
+#: classes/class-settings.php:181
 msgid "Phone mask"
 msgstr "Маска"
 
-#: classes/class-settings.php:160
+#: classes/class-settings.php:182
 msgid ""
 "Specify the required phone mask. The script responds to the number \"9\""
 msgstr "Укажите требуюмую маску телефона. Скрипт реагирует на цифру \"9\""
 
-#: classes/class-settings.php:170
+#: classes/class-settings.php:192
 msgid "Phone placeholder"
 msgstr "Плейсходер"
 
-#: classes/class-settings.php:171
+#: classes/class-settings.php:193
 msgid "Specify a placeholder for the phone field"
 msgstr "Укажите плейсхолдер для поля телефона"
 
-#: classes/class-settings.php:204
+#: classes/class-settings.php:255
 msgid "Add fast order button near checkout button"
 msgstr "Добавить кнопку быстрого заказа рядом с кнопкой оформления заказа"
 
-#: classes/class-settings.php:205
+#: classes/class-settings.php:256
 msgid "Replace checkout button with fast order button"
 msgstr "Заменить кнопку оформления заказа кнопкой быстрого заказа"
 
