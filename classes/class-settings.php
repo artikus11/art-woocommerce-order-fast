@@ -32,7 +32,6 @@ class Settings extends WC_Settings_Page {
 		$this->label = __( 'Fast Order', 'art-woocommerce-order-fast' );
 
 		parent::__construct();
-
 	}
 
 
@@ -89,6 +88,9 @@ class Settings extends WC_Settings_Page {
 	 * @param  string $current_section название входящей секции.
 	 *
 	 * @return array|mixed|void
+	 *
+	 * @since 1.0.0
+	 * @since 1.2.2
 	 */
 	public function get_settings( string $current_section = '' ) {
 
@@ -123,6 +125,27 @@ class Settings extends WC_Settings_Page {
 					'id'   => 'woocommerce_awof_settings',
 				],
 				[
+					'title'    => __( 'Form fields', 'art-woocommerce-order-fast' ),
+					'desc'     => __( 'Select the required fields', 'art-woocommerce-order-fast' ),
+					'id'       => 'woocommerce_awof_form_fields',
+					'css'      => 'min-width:350px;',
+					'class'    => 'wc-enhanced-select',
+					'type'     => 'multiselect',
+					'default'  => $this->default_form_fields(),
+					'options'  => $this->select_form_fields(),
+					'desc_tip' => true,
+					'autoload' => false,
+				],
+				[
+					'title'    => __( 'Show field labels', 'art-woocommerce-order-fast' ),
+					'desc'     => '',
+					'id'       => 'woocommerce_awof_show_labels',
+					'type'     => 'checkbox',
+					'default'  => 'off',
+					'desc_tip' => true,
+					'autoload' => false,
+				],
+				[
 					'title'    => __( 'Button Label', 'art-woocommerce-order-fast' ),
 					'desc'     => __( 'Specify the desired label on the button', 'art-woocommerce-order-fast' ),
 					'id'       => 'woocommerce_awof_button',
@@ -132,7 +155,6 @@ class Settings extends WC_Settings_Page {
 					'desc_tip' => true,
 					'autoload' => false,
 				],
-
 				[
 					'title'    => __( 'Delay time success, ms', 'art-woocommerce-order-fast' ),
 					'desc'     => __( 'Success message display delay time', 'art-woocommerce-order-fast' ),
@@ -186,7 +208,36 @@ class Settings extends WC_Settings_Page {
 		);
 
 		return apply_filters( 'woocommerce_get_settings_' . $this->id, $settings, $current_section );
+	}
 
+
+	/**
+	 * @return array
+	 * @since 1.2.2
+	 */
+	public function select_form_fields(): array {
+
+		return apply_filters(
+			'awof_select_form_fields',
+			[
+				'awof-name'  => __( 'Name', 'art-woocommerce-order-fast' ),
+				'awof-email' => __( 'Email', 'art-woocommerce-order-fast' ),
+				'awof-phone' => __( 'Phone', 'art-woocommerce-order-fast' ),
+			]
+		);
+	}
+
+
+	/**
+	 * @return string[]
+	 *
+	 * @since 1.3.0
+	 */
+	public function default_form_fields(): array {
+
+		return [
+			'awof-phone',
+		];
 	}
 
 
@@ -225,5 +276,6 @@ class Settings extends WC_Settings_Page {
 	}
 
 }
+
 
 new Settings();
