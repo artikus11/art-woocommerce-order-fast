@@ -108,7 +108,7 @@ class Front {
 			}
 		}
 
-		return $fields;
+		return apply_filters( 'awof_form_fields', $fields );
 	}
 
 }
