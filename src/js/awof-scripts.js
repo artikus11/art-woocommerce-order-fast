@@ -145,7 +145,6 @@ jQuery( function ( $ ) {
 
 			fields.forEach( function ( field ) {
 
-
 				if ( $( field ).val() ) {
 					return true;
 				}
@@ -164,7 +163,9 @@ jQuery( function ( $ ) {
 			} );
 
 
-			block( $( e.target ) )
+			block( $( e.target ) );
+
+			$( document.body ).trigger( 'awof_trigger_before_send_form', fields );
 
 			AWOF.request( $this, formData, phone );
 		},

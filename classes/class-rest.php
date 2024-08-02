@@ -100,7 +100,8 @@ class Rest {
 					'billing_first_name' => $request->get_param( 'awof-name' ),
 					'payment_method'     => '',
 					'billing_phone'      => $request->get_param( 'awof-phone' ),
-				]
+				],
+				$request
 			)
 		);
 	}

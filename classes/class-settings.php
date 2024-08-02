@@ -218,7 +218,7 @@ class Settings extends WC_Settings_Page {
 	public function select_form_fields(): array {
 
 		return apply_filters(
-			'awof_select_form_fields',
+			'awof_setting_form_fields',
 			[
 				'awof-name'  => __( 'Name', 'art-woocommerce-order-fast' ),
 				'awof-email' => __( 'Email', 'art-woocommerce-order-fast' ),
