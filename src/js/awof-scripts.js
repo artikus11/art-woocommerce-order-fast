@@ -145,7 +145,6 @@ jQuery( function ( $ ) {
 
 			fields.forEach( function ( field ) {
 
-
 				if ( $( field ).val() ) {
 					return true;
 				}
